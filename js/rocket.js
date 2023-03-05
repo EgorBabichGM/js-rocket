@@ -49,7 +49,7 @@ var changeState = function(state) {
 
             console.log('randomNumber:', randomNumber);
 
-            if (randomNumber > 1) {
+            if (randomNumber > 5) {
             // success
             changeState(4);
          } else 
