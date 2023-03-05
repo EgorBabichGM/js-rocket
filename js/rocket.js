@@ -7,24 +7,37 @@ var changeState = function(state) {
     document.getElementById('countdown').innerHTML = countdownNumber;
     // countdown
 
-    if (countdownNumber > 4 && countdownNumber <= 7) {
-    // be nerveous
-    document.getElementById('nervous').className = 'nervous show';
-    } else { 
-        document.getElementById('nervous').className = 'nervous';
-    }
-    if (countdownNumber > 1 && countdownNumber <= 4) {
-    //  can't wait
-    document.getElementById('cant-wait').className = 'cant-wait show';
-    } else {
-        document.getElementById('cant-wait').className = 'cant-wait';
-    }
-
+    if (countdownNumber == 5) {
+        // be nervous 
+        document.getElementById('nervous').className = 'nervous show';
+        } else { 
+            document.getElementById('nervous').className = 'nervous';
+        }
+        if (countdownNumber > 1 && countdownNumber <= 4) {
+        //  can't wait
+        document.getElementById('cant-wait').className = 'cant-wait show';
+        } else {
+            document.getElementById('cant-wait').className = 'cant-wait';
+        }
 
     if (state == 2) {
     timer = setInterval(function() { 
         countdownNumber = countdownNumber -1;
         document.getElementById('countdown').innerHTML = countdownNumber;
+    
+        if (countdownNumber > 4 && countdownNumber <= 7) {
+            // be nervous 
+            document.getElementById('nervous').className = 'nervous show';
+            } else { 
+                document.getElementById('nervous').className = 'nervous';
+            }
+            if (countdownNumber > 1 && countdownNumber <= 4) {
+            //  can't wait
+            document.getElementById('cant-wait').className = 'cant-wait show';
+            } else {
+                document.getElementById('cant-wait').className = 'cant-wait';
+            }
+    
     if (countdownNumber <= 0) {
         changeState(3);
     }
@@ -41,8 +54,9 @@ var changeState = function(state) {
             changeState(4);
          } else 
             {
-            changeState(5);  // oh no!
+            changeState(5);
          }
             }, 5000);
     };
+
 }
