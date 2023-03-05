@@ -1,0 +1,68 @@
+.left{
+    background-color: #005BBB;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+.right{
+    background-color: #FFD500;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.putin{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    width: 40px;
+    height: 100px;
+    background-color: black;
+    transition: bottom 10000ms;
+}
+body.body-state3 .putin,
+body.body-state4 .putin {
+    bottom: 1000px;
+}
+.ground{
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+.sky{
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+a{
+
+}
+a.button{
+
+}
+.state1,
+.state2,
+.state3,
+.state4,
+.state5 {
+    display: none;
+}
+
+body.body-state1 .putin{transition: none;}
+
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}
